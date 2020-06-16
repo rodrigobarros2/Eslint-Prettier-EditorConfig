@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Instalar extenção editor config
+2. Clicar com botão direito generetion .editorconfig
+3. Colar dentro do arquivo
 
-## Available Scripts
 
-In the project directory, you can run:
+root = true
 
-### `npm start`
+[*]
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+indent_style = tab
+indent_size = 4
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+5. npm install eslint -D
+6. npx eslint —init
+7. Segue o passo a passo para a instalação do eslint Airbnb (com js)
+8. npm install prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+9. Colocar esse código dentro do .eslintrc
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+module.exports = {
+	env: {
+		browser: true,
+		es6: true,
+	},
+	extends: [
+		'plugin:react/recommended',
+		'airbnb',
+		'prettier',
+		'prettier/react',
+	],
+	globals: {
+		Atomics: 'readonly',
+		SharedArrayBuffer: 'readonly',
+	},
+	parser: 'babel-eslint',
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
+		ecmaVersion: 2018,
+		sourceType: 'module',
+	},
+	plugins: ['react', 'prettier', 'react-hooks'],
+	rules: {
+		'prettier/prettier': 'error',
+		'react/jsx-filename-extension': [
+			'warn',
+			{ extensions: ['.jsx', '.js'] },
+		],
+		'import/prefer-default-export': 'off',
+		'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+		'react/jsx-one-expression-per-line': 'off',
+		'global-require': 'off',
+		'react-native/no-raw-text': 'off',
+		'no-param-reassign': 'off',
+		'no-underscore-dangle': 'off',
+		camelcase: 'off',
+		'no-console': ['error', { allow: ['tron'] }],
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'warn',
+	},
+};
 
-### `npm run build`
+10. criar um arquivo chamado .prettierrc
+11. colocar o código abaixo dentro do prettier
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+{
+    "singleQuote": true,
+    "trailingComma": "es5"
+}
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+12. Fim
