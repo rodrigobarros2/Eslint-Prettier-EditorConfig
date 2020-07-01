@@ -16,7 +16,7 @@ insert_final_newline = true
 
 
 5. npm install eslint -D
-6. npx eslint —init
+6. npx eslint --init
 7. Segue o passo a passo para a instalação do eslint Airbnb (com js)
 8. npm install prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
 9. Colocar esse código dentro do .eslintrc
