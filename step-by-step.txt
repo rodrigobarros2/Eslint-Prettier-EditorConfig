@@ -1,3 +1,10 @@
+.colocar nas configurações do vscode para auto salvar
+
+  "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+
+
 1. Instalar extenção editor config
 2. Clicar com botão direito generetion .editorconfig
 3. Colar dentro do arquivo
