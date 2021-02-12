@@ -72,6 +72,9 @@ module.exports = {
 	},
 };
 
+9.1. PROJETOS COM TYPESCRIPT ADICIONAR 
+yarn add eslint-import-resolver-typescript -D
+
 10. criar um arquivo chamado .prettierrc
 11. colocar o código abaixo dentro do prettier
 
